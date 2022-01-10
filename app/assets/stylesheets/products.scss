@@ -73,7 +73,12 @@ main section.products-show {
   }
 }
 
-.sold-out {
+.sold-out .sold-out-label {
+  display: block;
+}
+
+.sold-out-label {
+  display: none;
   position: absolute;
   top: 0;
   left: 0;
@@ -85,10 +90,6 @@ main section.products-show {
   font-weight: 600;
 }
 
-.sold-out::before {
-  content: "SOLD OUT!";
-}
-
-article .sold-out  button { 
+.sold-out button {
   display: none;
 }

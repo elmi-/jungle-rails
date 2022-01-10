@@ -1,6 +1,6 @@
-<article class="product">
+<article class="product <%= product.quantity == 0 ? 'sold-out' : '' %>">
   <header>
-  <em class="<%= product.quantity == 0 ? 'sold-out' : '' %>"></em>
+  <em class="sold-out-label">SOLD-OUT!</em>
     <%= link_to product do %>
       <%= image_tag product.image.thumb, alt: product.name %>
       <h4><%= product.name %></h4>
@@ -10,7 +10,7 @@
     <%= product.description %>
   </p>
   <footer class="actions">
-    <%= button_to add_item_cart_path(product_id: product.id), class: 'btn btn-primary', method: :post do %>
+    <%= button_to add_item_cart_path(product_id: product.id), class: product.name, class: 'btn btn-primary', method: :post do %>
       <%= fa_icon "shopping-cart", text: 'Add' %>
     <% end %>
     <%= link_to product, class: 'btn btn-default pull-right' do %>
