@@ -1,2 +1,14 @@
-<h1>Admin::Dashboard#show</h1>
-<p>Find me in app/views/admin/dashboard/show.html.erb</p>
+<h1>Admin Dashboard</h1>
+<article class="admin-dashboard">
+
+  <section class="card-body">
+    <header class="card-title">Category Count</header>
+    <em class="card-text"><%= @category_count %></em>
+    <%= link_to "View Categories", :root, class: "btn btn-primary"  %>
+  </section>
+  <section class="card-body">
+    <header class="card-title">Product Count</header>
+    <em class="card-text"><%= @product_count %></em>
+    <%= link_to "View Products", admin_products_url, class: "btn btn-primary"  %>
+  </section>
+</article>
