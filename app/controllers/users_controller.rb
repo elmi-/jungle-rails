@@ -5,10 +5,10 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params)
     if @user.save
-      session[:user_id] = user_id
-      redirect_to [:root]
+      session[:user_id] = @user.id
+      redirect_to :root
     else
-      redirect_to :create
+      redirect_to :register
     end
   end
 

@@ -7,10 +7,18 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-
-  <%= render 'layouts/top_nav' %>
+    <%= render 'layouts/top_nav' %>
 
   <main class="container">
+  <section class="session">
+    <header>
+      <% if current_user %>
+        Signed in as <%= current_user.email %> | <%= link_to "Logout", :logout %>
+      <% else %>
+        <%= link_to "Login", :login %> | <%= link_to "Register", :register %>
+      <% end %>
+    </header>
+  </section>
     <%= yield %>
   </main>
 
