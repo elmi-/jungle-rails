@@ -26,6 +26,5 @@ RSpec.feature "ProductDetails", type: :feature, js: true do
     # byebug
 
     expect(page).to have_content("Description")
-    
   end
 end
