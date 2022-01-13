@@ -41,7 +41,7 @@ Minor: As a Visitor I can place an order (i.e. without logging in and therefore 
 - When the cart is empty and the user goes to the carts#show page, instead of displaying the contents and a stripe checkout button, display a friendly message about how it is empty and link to the home page
 
 ## Screenshots
-!["home page screenshot"](https://github.com/lighthouse-labs/tinyapp/blob/master/docs/urls-page.png)
+!["home page screenshot"](https://github.com/elmi-/jungle-rails/blob/master/docs/home.PNG)
 
 ## Additional Steps for Apple M1 Machines
 
